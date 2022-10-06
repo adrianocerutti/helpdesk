@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // variável que verifica se a autenticação foi realizada
 $usuario_autenticado = false;
 
@@ -21,6 +23,8 @@ foreach ($usuarios_app as $user) {
 
 if ($usuario_autenticado) {
     echo "Usuário autenticado";
+    $_SESSION['autenticado'] = 'SIM';
 } else {
+    $_SESSION['autenticado'] = 'NAO';
     header('Location: index.php?login=erro');
 }
