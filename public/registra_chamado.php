@@ -8,7 +8,7 @@
 
     $texto = $_SESSION['id']. '#' . $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
     
-    $arquivo = fopen('arquivo.hd', 'a');
+    $arquivo = fopen('../app/arquivo.hd', 'a');
 
     fwrite($arquivo, $texto);
 
